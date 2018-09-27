@@ -1,0 +1,36 @@
+
+<div class="responsive-container align-center" >
+  <div class="nice-box inline-block">
+      <h3 class="dark align-center" style="text-align:center">Log In to Delivery Service</h3>
+
+      <div class="sign-up-form-container inline-block v-middle align-left" style="margin-left:5%;margin-right:5%;margin-bottom:3%">
+<form  [formGroup]="LoginForm" (ngSubmit)="onSubmitLogin()" novalidate>
+  <fieldset>
+    <div class="form-group">
+      <label for="disabledTextInput">FirstName</label>
+      <input type="text" id="FirstNameTextInput" class="form-control" formControlName="firstName" placeholder="FirstName" required>
+      <div *ngIf="!LoginForm.controls.firstName?.valid && (LoginForm.controls.firstName?.dirty ||LoginForm.controls.firstName?.touched)" class="alert alert-danger">
+        <div [hidden]="!LoginForm.controls.firstName.errors.required">
+            First Name is required
+        </div>
+    </div>
+    
+    </div>
+    <div class="form-group">
+      <label for="disabledTextInput">LastName</label>
+      <input type="text" id="LastNameTextInput" class="form-control" formControlName="lastName" placeholder="LastName" required>
+      <div *ngIf="!LoginForm.controls.lastName?.valid && (LoginForm.controls.lastName?.dirty ||LoginForm.controls.lastName?.touched)" class="alert alert-danger">
+        <div [hidden]="!LoginForm.controls.lastName.errors.required">
+            Last Name is required
+        </div>
+    </div>
+  </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!LoginForm.valid">LogIn</button>
+  </fieldset>
+</form>
+</div>
+</div>
+</div>
+
+ 

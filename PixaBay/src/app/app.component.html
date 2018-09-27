@@ -1,0 +1,8 @@
+<div *ngIf="IsAuthenticated" >
+    <app-home></app-home>
+  </div>
+
+  <div *ngIf="!IsAuthenticated" >
+    <app-login (IsAuthenticated)="Authentication($event)"></app-login>
+  </div>
+ 

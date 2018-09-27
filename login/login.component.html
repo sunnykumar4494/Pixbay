@@ -1,0 +1,25 @@
+
+<div class="responsive-container align-center" >
+  <div class="nice-box inline-block">
+      <h3 class="dark align-center" style="text-align:center">Log In to Delivery Service</h3>
+
+      <div class="sign-up-form-container inline-block v-middle align-left" style="margin-left:5%;margin-right:5%;margin-bottom:3%">
+<form  [formGroup]="LoginForm" (ngSubmit)="onSubmitLogin()">
+  <fieldset>
+    <div class="form-group">
+      <label for="disabledTextInput">FirstName</label>
+      <input type="text" id="FirstNameTextInput" class="form-control" formControlName="firstName" placeholder="FirstName" required>
+    </div>
+    <div class="form-group">
+      <label for="disabledTextInput">LastName</label>
+      <input type="text" id="LastNameTextInput" class="form-control" formControlName="lastName" placeholder="LastName" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">LogIn</button>
+  </fieldset>
+</form>
+</div>
+</div>
+</div>
+
+ 

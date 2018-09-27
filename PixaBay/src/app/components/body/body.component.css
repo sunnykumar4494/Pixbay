@@ -1,0 +1,52 @@
+ 
+
+
+
+
+.zoom:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+ 
+.card:hover .overlay {
+    opacity: 1;
+  }
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+     
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+   
+    font-size: 20px;
+  
+    text-align: center;
+  }
+  .flexContainer {
+    display:flex;
+    max-height:200px;
+    
+  }
+  .flexContainer > img {
+  flex:1;
+  border:1px solid;
+  margin:1px;
+  }
+
+  @media all and (max-width: 768px) {
+    /* 768px is usually the width of tablets in portrait orientation */
+    /* You can use any other size you see fit */
+    
+        img {width: 100%;}
+    }
+
+    @media all and (max-width: 600px) {
+      /* 768px is usually the width of tablets in portrait orientation */
+      /* You can use any other size you see fit */
+      
+          img {width: 100%;}
+      }
+   

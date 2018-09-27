@@ -1,0 +1,76 @@
+
+ 
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Angular 5 Demo Project  Consuming Pixbay Web API</h1>
+    <p class="lead">
+        Angular 5 is a JavaScript framework built for the future. With expanded support for mobile and responsive design, a shiny new CLI, streamlined DI, improved data binding, and a switch to components-based web development, Angular 5 is well positioned for the next era of web development .
+    </p>
+    <hr class="my-4">
+    <p>Search Your Favourite Images Here</p>
+    
+   
+    <p class="lead">
+      <input type="text" #image style="width:33%">
+      <button type="button"  (click)="ClickMe(image.value)">Click Me</button>
+    </p>
+  </div>
+
+  
+<!-- Card deck -->
+<div class="card-deck col-xs-12 col-md-12" style="margin-left:1px;margin-top:0%;padding:0%;;background-color: #343a40!important;">
+
+    <!-- Card -->
+
+
+
+    
+    <div *ngFor="let image of pixbaydata.hits;">
+      
+      
+    <div class="card zoom " style="margin-top:2%;margin-bottom:2%">
+  
+      <!--Card image-->
+      
+                     
+  
+        <span  class="col-xs-12 ">
+           <img src={{image.webformatURL}}  title={{image.tags}}   width={{image.previewWidth*2.5}}  height=310 style="max-width: 100%;">
+        
+        </span>
+      
+  
+      <!--Card content-->
+      <div class="overlay">
+  
+        <div class="rounded-bottom mdb-color lighten-2 text-center pt-2" >
+          <ul class="list-unstyled list-inline font-small">
+            <li class="list-inline-item pr-2 white-text"><a href="#" class="white-text"><i class="fa fa-thumbs-o-up pr-1"></i>{{image.likes}}</a> </li>
+            <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fa fa-star-o"></i>{{image.favorites}}</a></li>
+            <li class="list-inline-item pr-2"><a href="#" class="white-text"><i class="fa fa-comments-o pr-1"> </i>{{image.comments}} </a></li>
+  
+          </ul>
+        </div>
+      <!-- </div> -->
+      </div>
+  
+    </div>
+  </div>
+
+  <div *ngIf="pixbaydata.hits.length==0">
+  <h1 style="text-align:center;color:white">No Image found</h1>  
+  </div>
+  
+  </div>   
+
+
+
+
+
+
+
+  
+
+  
+  
